@@ -1,6 +1,6 @@
 'use strict;'
 function Airport () {}
 
-Airport.prototype.land = function() {
-  return true;
-}
+Airport.prototype.planes = function() {
+  return [];
+};

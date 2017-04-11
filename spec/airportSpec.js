@@ -6,7 +6,7 @@ describe('Airport', function() {
     airport = new Airport();
   });
 
-  describe('plane should confirm landing', function(){
-    expect(airport.land).toBe(true);
+  it('has no planes by default', function(){
+    expect(airport.planes()).toEqual([]);
   });
 });
