@@ -8,7 +8,7 @@ describe('Plane', function(){
   });
 
   it('plane is able to land', function(){
-    expect(plane.land()).toEqual(true);
+    expect(plane.land()).toEqual('Plane has landed');
   });
 
 });

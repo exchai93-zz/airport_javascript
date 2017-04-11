@@ -2,5 +2,5 @@
 function Plane (){}
 
 Plane.prototype.land = function(){
-  return true;
+  return 'Plane has landed';
 };
