@@ -17,4 +17,6 @@ Airport.prototype.takeOff = function(plane) {
   }
 };
 
+
+
 // need to create a function in airport that calls upon plane i.
