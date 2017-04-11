@@ -5,11 +5,16 @@ describe('Plane', function(){
 
   beforeEach(function(){
     plane = new Plane();
+    // airport = jasmine.createSpyObj('airport', ['landPlane']);
+    airport = new Airport();
   });
 
   it('plane is able to land', function(){
-    expect(plane.land()).toEqual('Plane has landed');
+    expect(plane.land(airport)).toEqual('Plane has landed');
   });
 
+  it('plane is able to take off', function() {
+    expect(plane.takeOff(airport)).toEqual('Plane has taken off');
+  });
 
 });

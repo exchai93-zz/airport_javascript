@@ -14,7 +14,12 @@ describe('Airport', function() {
 
   it('confirms plane is in hangar array', function(){
     airport.landPlane(plane);
-    expect(airport.planes()).toEqual([plane]);
+    expect(airport.planes()).toContain(plane);
+  });
+
+  it('confirms plane no longer in hangar array', function(){
+    airport.takeOff(plane);
+    expect(airport.planes()).not.toContain(plane);
   });
 
 });
