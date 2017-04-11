@@ -1,11 +1,8 @@
 'use strict';
-function Weather () {}
+function Weather () {
+  this._CHANCE_OF_STORMY = 0.6;
+}
 
 Weather.prototype.isStormy = function() {
-  var rand = Math.floor((Math.random() * 10) + 1);
-    if(rand > 6){
-      return true;
-    } else {
-      return false;
-    }
+  return (Math.random() > this._CHANCE_OF_STORMY);
 };

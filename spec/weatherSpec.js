@@ -6,10 +6,15 @@ describe('Weather', function() {
   beforeEach(function(){
     weather = new Weather();
   });
-  xit('is stormy if even number', function(){
-    // maybe stub rand or see if it returns a boolean 
-    spyOn(weather, []'rand').and.returnValue(2);
-    expect(weather.isStormy()).toEqual(true);
+
+  it('is stormy if even number', function(){
+    spyOn(Math, 'random').and.returnValue(1);
+    expect(weather.isStormy()).toBeTruthy();
+  });
+
+  it('is stormy if even number', function(){
+    spyOn(Math, 'random').and.returnValue(0);
+    expect(weather.isStormy()).toBeFalsy();
   });
 
 });
